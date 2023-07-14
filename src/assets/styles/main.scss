@@ -160,6 +160,7 @@ body {
     padding-bottom: 10px;
     height: 100px;
     cursor: pointer;
+    width: 700px;
   }
   &__menu {
     position: relative;
@@ -709,7 +710,7 @@ body {
     width: 100%;
     border-radius: 30px;
     border: 2px solid var(--black);
-    min-height: 700px;
+    min-height: 725px;
     &__button {
       position: absolute;
       bottom: -120px;
