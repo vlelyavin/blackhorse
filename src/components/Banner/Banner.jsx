@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { Typewriter } from "../Typewriter";
 
 export const Banner = () => {
-  const observer = useInView({ threshold: 0.5 });
+  const observer = useInView({ threshold: 0.1 });
   return (
     <Container>
       <section className="banner" ref={observer.ref}>
