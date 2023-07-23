@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 export const Typewriter = ({ targetText, timeout, started }) => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState(targetText[0]);
   let timer;
 
   const handleGenerate = () => {
-    let i = -1;
+    let i = 0;
     // setTimeout(() => {
     // }, timeout);
-
     timer = setInterval(() => {
       i++;
       if (i === targetText.length - 1) clearInterval(timer);
@@ -20,12 +19,12 @@ export const Typewriter = ({ targetText, timeout, started }) => {
     if (started) {
       handleGenerate();
     } else {
-      setText("");
+      setText(targetText[0]);
     }
 
     return () => {
       clearInterval(timer);
     };
   }, [started]);
-  return <span style={{ transition: "0.8s" }}>{text}</span>;
+  return <span style={{ opacity: text.length === 1 ? 0 : 1, transition: "0.8s" }}>{text}</span>;
 };
