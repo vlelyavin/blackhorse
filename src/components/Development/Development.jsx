@@ -3,6 +3,7 @@ import devUpperImage from "../../assets/images/developmentUpperImage.png";
 import { Button } from "../Button";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
+import { Typewriter } from "../Typewriter";
 
 export const Development = () => {
   const observer = useInView({ threshold: 0.1 });
@@ -12,9 +13,12 @@ export const Development = () => {
         <div className="dev__inner">
           <div className="dev__upper">
             <div className={classNames("dev__upper__title title", { animate: observer.inView })}>
-              Web and
-              <br /> mobile
-              <br /> development
+              <Typewriter targetText="Web and" timeout={100} started={observer.inView} />
+
+              <br />
+              <Typewriter targetText="mobile" timeout={450} started={observer.inView} />
+              <br />
+              <Typewriter targetText="development" timeout={750} started={observer.inView} />
             </div>
             <div className={classNames("dev__upper__image__container", { animate: observer.inView })}>
               <img src={devUpperImage} alt="devUpperImage" className="dev__upper__image" />
@@ -78,7 +82,6 @@ export const Development = () => {
                   </div>
                 </ul>
               </div>
-              <Button className="dev__column__button" />
             </div>
           </div>
         </div>

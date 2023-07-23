@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import { Container } from "../Container";
 import classNames from "classnames";
+import { Typewriter } from "../Typewriter";
 
 export const Extra = () => {
   const observer = useInView({ threshold: 0.1 });
@@ -8,7 +9,9 @@ export const Extra = () => {
     <section className="extra" ref={observer.ref}>
       <Container>
         <div className="extra__inner">
-          <div className={classNames("extra__title title", { animate: observer.inView })}>also we do</div>
+          <div className={classNames("extra__title title", { animate: observer.inView })}>
+            <Typewriter targetText="also we do" timeout={100} started={observer.inView} />
+          </div>
           <div className="extra__grid">
             <div className={classNames("extra__grid__item", { animate: observer.inView })}>
               <div className="extra__grid__item__title">QA</div>

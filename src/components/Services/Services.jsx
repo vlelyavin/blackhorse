@@ -2,6 +2,7 @@ import { Container } from "../Container";
 import spinner from "../../assets/images/servicesSpinner.png";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
+import { Typewriter } from "../Typewriter";
 
 export const Services = () => {
   const options = {
@@ -23,9 +24,9 @@ export const Services = () => {
             </div>
           </div>
           <div className={classNames("services__upper__title title", { animate: observer.inView })}>
-            Technology
+            <Typewriter targetText="Technology" timeout={100} started={observer.inView} />
             <br />
-            services
+            <Typewriter targetText="services" timeout={600} started={observer.inView} />
           </div>
         </div>
         <div className="services__list">
@@ -136,11 +137,12 @@ export const Services = () => {
       <div className="services__lower">
         <div className="services__lower__title title">Black horse</div>
         <div className="services__lower__text">
-          We help you{" "}
+          We help you&nbsp;
           <span style={{ color: "var(--blue)" }}>
             unlock
             <br /> your potential
-          </span>{" "}
+          </span>
+          &nbsp;
           <span style={{ color: "var(--olive)" }}>
             and
             <br /> win
@@ -165,16 +167,69 @@ export const Services = () => {
             <div className="services__lower__row__item__symbol__container">
               <svg
                 className="services__lower__row__item__symbol"
-                width="106"
-                height="50"
-                viewBox="0 0 106 50"
+                width="239"
+                height="180"
+                viewBox="0 0 239 180"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M79.484 0.331998C87.2813 0.331998 93.5307 2.45333 98.232 6.696C102.933 10.824 105.284 16.9013 105.284 24.928C105.284 32.9547 102.933 39.1467 98.232 43.504C93.5307 47.7467 87.2813 49.868 79.484 49.868C74.0947 49.868 69.336 48.7213 65.208 46.428C61.1947 44.1347 57.0093 40.0067 52.652 34.044C48.4093 39.892 44.1667 44.02 39.924 46.428C35.796 48.7213 31.0947 49.868 25.82 49.868C18.0227 49.868 11.7733 47.7467 7.072 43.504C2.37067 39.1467 0.02 32.9547 0.02 24.928C0.02 16.9013 2.37067 10.824 7.072 6.696C11.7733 2.45333 18.0227 0.331998 25.82 0.331998C31.2093 0.331998 35.968 1.47866 40.096 3.77199C44.3387 6.06533 48.524 10.136 52.652 15.984C56.8947 10.136 61.08 6.06533 65.208 3.77199C69.336 1.47866 74.0947 0.331998 79.484 0.331998ZM26.68 39.892C30.464 39.892 33.9613 38.8027 37.172 36.624C40.3827 34.3307 43.8227 30.432 47.492 24.928C40.8413 15.0667 33.904 10.136 26.68 10.136C22.3227 10.136 18.768 11.3973 16.016 13.92C13.264 16.4427 11.888 20.112 11.888 24.928C11.888 29.6293 13.264 33.2987 16.016 35.936C18.768 38.5733 22.3227 39.892 26.68 39.892ZM78.624 39.892C82.9813 39.892 86.536 38.5733 89.288 35.936C92.1547 33.2987 93.588 29.6293 93.588 24.928C93.588 20.112 92.212 16.4427 89.46 13.92C86.708 11.3973 83.096 10.136 78.624 10.136C71.4 10.136 64.4627 15.0667 57.812 24.928C61.4813 30.432 64.9213 34.3307 68.132 36.624C71.3427 38.8027 74.84 39.892 78.624 39.892Z"
+                  d="M146.484 67.332C154.281 67.332 160.531 69.4533 165.232 73.696C169.933 77.824 172.284 83.9013 172.284 91.928C172.284 99.9547 169.933 106.147 165.232 110.504C160.531 114.747 154.281 116.868 146.484 116.868C141.095 116.868 136.336 115.721 132.208 113.428C128.195 111.135 124.009 107.007 119.652 101.044C115.409 106.892 111.167 111.02 106.924 113.428C102.796 115.721 98.0947 116.868 92.82 116.868C85.0227 116.868 78.7733 114.747 74.072 110.504C69.3707 106.147 67.02 99.9547 67.02 91.928C67.02 83.9013 69.3707 77.824 74.072 73.696C78.7733 69.4533 85.0227 67.332 92.82 67.332C98.2093 67.332 102.968 68.4787 107.096 70.772C111.339 73.0653 115.524 77.136 119.652 82.984C123.895 77.136 128.08 73.0653 132.208 70.772C136.336 68.4787 141.095 67.332 146.484 67.332ZM93.68 106.892C97.464 106.892 100.961 105.803 104.172 103.624C107.383 101.331 110.823 97.432 114.492 91.928C107.841 82.0667 100.904 77.136 93.68 77.136C89.3227 77.136 85.768 78.3973 83.016 80.92C80.264 83.4427 78.888 87.112 78.888 91.928C78.888 96.6293 80.264 100.299 83.016 102.936C85.768 105.573 89.3227 106.892 93.68 106.892ZM145.624 106.892C149.981 106.892 153.536 105.573 156.288 102.936C159.155 100.299 160.588 96.6293 160.588 91.928C160.588 87.112 159.212 83.4427 156.46 80.92C153.708 78.3973 150.096 77.136 145.624 77.136C138.4 77.136 131.463 82.0667 124.812 91.928C128.481 97.432 131.921 101.331 135.132 103.624C138.343 105.803 141.84 106.892 145.624 106.892Z"
                   fill="white"
                 />
+                <g filter="url(#filter0_d_412_2)">
+                  <path
+                    d="M119.5 170.5C150.839 170.5 179.275 161.526 199.915 146.94C220.552 132.357 233.5 112.071 233.5 89.5C233.5 66.9293 220.552 46.6431 199.915 32.06C179.275 17.4742 150.839 8.5 119.5 8.5C88.1609 8.5 59.7251 17.4742 39.0848 32.06C18.4484 46.6431 5.5 66.9293 5.5 89.5C5.5 112.071 18.4484 132.357 39.0848 146.94C59.7251 161.526 88.1609 170.5 119.5 170.5Z"
+                    stroke="url(#paint0_radial_412_2)"
+                    stroke-width="3"
+                    shape-rendering="crispEdges"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_412_2"
+                    x="0"
+                    y="7"
+                    width="239"
+                    height="173"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_412_2" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_412_2" result="shape" />
+                  </filter>
+                  <radialGradient
+                    id="paint0_radial_412_2"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(119.5 89.5) rotate(63.0042) scale(89.2216 126.257)"
+                  >
+                    <stop stop-color="white" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                    <animateTransform
+                      attributeName="gradientTransform"
+                      attributeType="XML"
+                      type="rotate"
+                      from="0"
+                      to="360"
+                      dur="5s"
+                      repeatCount="indefinite"
+                    />
+                  </radialGradient>
+                </defs>
               </svg>
             </div>
 

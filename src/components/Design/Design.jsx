@@ -3,6 +3,7 @@ import designUpperImage from "../../assets/images/designUpperImage.png";
 import { Button } from "../Button";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
+import { Typewriter } from "../Typewriter";
 
 export const Design = () => {
   const observer = useInView({ threshold: 0.1 });
@@ -35,22 +36,22 @@ export const Design = () => {
               <img src={designUpperImage} alt="designUpperImage" className="design__upper__image" />
             </div>
             <div className={classNames("design__lower__title title", { animate: observer.inView })}>
-              Web and ux/Ui
-              <br /> design
+              <Typewriter targetText="Web and ux/Ui" timeout={100} started={observer.inView} />
+              <br />
+              <Typewriter targetText="design" timeout={800} started={observer.inView} />
             </div>
             <div className="design__lower__info">
-              <Button className="design__lower__info__button" />
               <div className="design__lower__blocks">
-                <div className={classNames("design__lower__block", { animate: observer.inView })}>
+                <div className="design__lower__block">
                   As an end-to-end service provider, we offer professional website design services that ensure a truly
                   tailored approach to the look and feel of our customers’ web applications.
                 </div>
-                <div className={classNames("design__lower__block", { animate: observer.inView })}>
+                <div className="design__lower__block">
                   We make sure that every page we deliver is unique and fully complies with today’s standards of
                   usability, as well as with the customer’s corporate or brand visual guidelines. The amount of
                   information that modern applications have to contain is growing every day.
                 </div>
-                <div className={classNames("design__lower__block", { animate: observer.inView })}>
+                <div className="design__lower__block">
                   The issue is no longer how to demonstrate your professionalism in a graphically complex interface. On
                   the contrary, the goal today is to make a technically complex and functionally loaded project easy to
                   use. When you pull up a website, you should be able to easily find what you're looking for in three

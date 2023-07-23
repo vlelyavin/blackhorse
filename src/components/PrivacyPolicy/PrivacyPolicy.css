@@ -1,0 +1,130 @@
+.privacy {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  height: 70vh;
+  color: black;
+  background: white;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  font-family: var(--text-ff);
+}
+
+.privacy__inner {
+  padding: 20px 30px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.privacy__inner::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 8px;
+}
+
+.privacy__inner::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.privacy__inner::-webkit-scrollbar-thumb {
+  background-color: #888888;
+  border-radius: 8px;
+}
+
+.privacy__inner::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+}
+
+.privacy__inner h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.privacy__inner ol {
+  padding-left: 40px;
+}
+
+.privacy__inner ul {
+  padding-left: 50px;
+}
+
+.privacy__inner ol li p {
+  padding-left: 0;
+}
+
+.privacy__inner p {
+  padding-left: 20px;
+  line-height: 160%;
+}
+
+.privacy__inner__cross {
+  position: fixed;
+  top: 20px;
+  right: 35px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.privacy__inner__cross__line {
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  background: black;
+}
+
+.privacy__inner__cross__line:nth-child(1) {
+  transform: rotate(45deg) translateX(9px) translateY(9px);
+}
+
+.privacy__inner__cross__line:nth-child(2) {
+  transform: rotate(-45deg) translateX(9px) translateY(-9px);
+}
+
+@media (max-width: 600px) {
+  .privacy__inner {
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0.9rem;
+  }
+
+  .privacy__inner ol {
+    padding-left: 20px;
+  }
+
+  .privacy__inner p {
+    padding-left: 5px;
+  }
+
+  .privacy__inner__cross {
+    right: 20px;
+    top: 10px;
+    width: 20px;
+  }
+
+  .privacy__inner ul {
+    padding-left: 20px;
+  }
+
+  .privacy__inner h2 {
+    font-weight: 600;
+    font-size: 1rem;
+    padding-right: 40px;
+  }
+
+  .privacy__inner h1 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-right: 10px;
+  }
+}

@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
+import { Typewriter } from "../Typewriter";
 
 export const Contact = () => {
   const [first_name, setFirstName] = useState("");
@@ -68,7 +69,7 @@ export const Contact = () => {
         <div className="contact__upper" ref={observer.ref}>
           <div className={classNames("contact__upper__title title", { animate: observer.inView })}>
             <svg
-              className="contact__upper__title__icon"
+              className={classNames("contact__upper__title__icon", { animate: observer.inView })}
               width="197"
               height="197"
               viewBox="0 0 197 197"
@@ -84,8 +85,9 @@ export const Contact = () => {
                 fill="#4946C3"
               />
             </svg>
-            let's get in
-            <br /> touch
+            <Typewriter targetText="let's get in" timeout={100} started={observer.inView} />
+            <br />
+            <Typewriter targetText="touch" timeout={800} started={observer.inView} />
           </div>
           <div className={classNames("contact__upper__subtitle", { animate: observer.inView })}>
             Leave your contact

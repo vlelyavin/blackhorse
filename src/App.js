@@ -10,8 +10,21 @@ import { Support } from "./components/Support";
 import { Extra } from "./components/Extra";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { Terms } from "./components/Terms";
+import { PrivacyPolicy } from "./components/PrivacyPolicy";
+import { useState } from "react";
 
 export const App = () => {
+  const [isTermsElVisible, setTermsElVisibility] = useState(false);
+  const [isPrivacyVisible, setPrivacyVisibility] = useState(false);
+
+  const handleFooterLinkClick = () => {
+    setTermsElVisibility(!isTermsElVisible);
+  };
+
+  const handleFooterPrivacyLinkClick = () => {
+    setPrivacyVisibility(!isPrivacyVisible);
+  };
   return (
     <>
       <Header />
@@ -23,7 +36,12 @@ export const App = () => {
       <Support />
       <Extra />
       <Contact />
-      <Footer />
+      <Footer
+        handleFooterLinkClick={handleFooterLinkClick}
+        handleFooterPrivacyLinkClick={handleFooterPrivacyLinkClick}
+      />
+      {isTermsElVisible && <Terms handleClick={handleFooterLinkClick} />}
+      {isPrivacyVisible && <PrivacyPolicy handleClick={handleFooterPrivacyLinkClick} />}
     </>
   );
 };

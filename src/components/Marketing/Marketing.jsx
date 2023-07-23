@@ -3,6 +3,7 @@ import marketingLowerImage from "../../assets/images/marketingLowerImage.png";
 import { Button } from "../Button";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
+import { Typewriter } from "../Typewriter";
 
 export const Marketing = () => {
   const observer = useInView({ threshold: 0.1 });
@@ -15,8 +16,10 @@ export const Marketing = () => {
               <img src={marketingLowerImage} alt="marketingLowerImage" className="marketing__column__image" />
             </div>
             <div className={classNames("marketing__column__title title", { animate: observer.inView })}>
-              Marketing
-              <br /> and seo
+              <Typewriter targetText="Marketing" timeout={100} started={observer.inView} />
+              &nbsp;
+              <br />
+              <Typewriter targetText="and seo" timeout={800} started={observer.inView} />
             </div>
             <div className={classNames("marketing__column__subtitle", { animate: observer.inView })}>
               Search engine marketing
@@ -38,13 +41,15 @@ export const Marketing = () => {
           </div>
           <div className="marketing__column">
             <div className={classNames("marketing__column__title title", { animate: observer.inView })}>
-              Marketing
-              <br /> and seo
+              <Typewriter targetText="Marketing" timeout={100} started={observer.inView} />
+
+              <br />
+              <Typewriter targetText="and seo" timeout={800} started={observer.inView} />
             </div>
             <div className={classNames("marketing__column__subtitle", { animate: observer.inView })}>
               Search engine optimization
             </div>
-            <div className={classNames("marketing__column__text", { animate: observer.inView })}>
+            <div className="marketing__column__text">
               If you want to make the most of your online resource and aren’t using search engine optimization, you
               should seriously consider it. SEO website promotion will help you to:
             </div>
@@ -54,7 +59,6 @@ export const Marketing = () => {
               <div className="marketing__column__benefit">Popularize your brand</div>
             </div>
           </div>
-          <Button className="marketing__button" />
         </div>
       </Container>
     </section>

@@ -1,7 +1,7 @@
 import { Container } from "../Container";
 import logo from "../../assets/images/logo.svg";
 
-export const Footer = () => {
+export const Footer = (props) => {
   const options = {
     block: "start",
     behavior: "smooth",
@@ -104,6 +104,14 @@ export const Footer = () => {
           </div>
         </div>
       </footer>
+      <div className="footer__policies">
+        <div className="footer__policies__link footerLinkHoverUnderline" onClick={props.handleFooterPrivacyLinkClick}>
+          Privacy Policy
+        </div>
+        <div className="footer__policies__link footerLinkHoverUnderline" onClick={props.handleFooterLinkClick}>
+          Terms And Conditions
+        </div>
+      </div>
     </Container>
   );
 };
