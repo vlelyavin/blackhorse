@@ -24,9 +24,12 @@ export const Services = () => {
             </div>
           </div>
           <div className={classNames("services__upper__title title", { animate: observer.inView })}>
-            <Typewriter targetText="Technology" timeout={100} started={observer.inView} />
-            <br />
-            <Typewriter targetText="services" timeout={600} started={observer.inView} />
+            <div className="phrase">
+              <Typewriter targetText="Technology" timeout={100} started={observer.inView} />
+            </div>
+            <div className="phrase">
+              <Typewriter targetText="services" timeout={600} started={observer.inView} />
+            </div>
           </div>
         </div>
         <div className="services__list">
@@ -181,8 +184,8 @@ export const Services = () => {
                   <path
                     d="M119.5 170.5C150.839 170.5 179.275 161.526 199.915 146.94C220.552 132.357 233.5 112.071 233.5 89.5C233.5 66.9293 220.552 46.6431 199.915 32.06C179.275 17.4742 150.839 8.5 119.5 8.5C88.1609 8.5 59.7251 17.4742 39.0848 32.06C18.4484 46.6431 5.5 66.9293 5.5 89.5C5.5 112.071 18.4484 132.357 39.0848 146.94C59.7251 161.526 88.1609 170.5 119.5 170.5Z"
                     stroke="url(#paint0_radial_412_2)"
-                    stroke-width="3"
-                    shape-rendering="crispEdges"
+                    strokeWidth="3"
+                    shapeRendering="crispEdges"
                   />
                 </g>
                 <defs>
@@ -193,9 +196,9 @@ export const Services = () => {
                     width="239"
                     height="173"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -217,8 +220,8 @@ export const Services = () => {
                     gradientUnits="userSpaceOnUse"
                     gradientTransform="translate(119.5 89.5) rotate(63.0042) scale(89.2216 126.257)"
                   >
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                    <stop stopColor="white" />
+                    <stop offset="1" stopColor="white" stopOpacity="0" />
                     <animateTransform
                       attributeName="gradientTransform"
                       attributeType="XML"
