@@ -33,9 +33,9 @@ export const Footer = (props) => {
                 />
               </svg>
               <div className="footer__contact__column__line__text">
-                3rd Floor Suite , 207 Regent
-                <br /> Street, London,
-                <br /> W1B3HH
+                27, Old Gloucester Street, London,
+                <br />
+                WC1N 3AX, England, Great Britain
               </div>
             </div>
           </div>
@@ -59,8 +59,8 @@ export const Footer = (props) => {
                 />
               </svg>
 
-              <a href="tel:+447537142868" className="footer__contact__column__line__text">
-                +44 753 714 28 68
+              <a href="tel:+37281538393" className="footer__contact__column__line__text">
+                + 372-81-538-393
               </a>
             </div>
             <div className="footer__contact__column__line">
@@ -78,8 +78,8 @@ export const Footer = (props) => {
                 />
               </svg>
 
-              <a href="mailto:office@quantumtech.dev" className="footer__contact__column__line__text">
-                office@quantumtech.dev
+              <a href="mailto:info@blackhorseit.co" className="footer__contact__column__line__text">
+                info@blackhorseit.co
               </a>
             </div>
           </div>
@@ -105,10 +105,10 @@ export const Footer = (props) => {
         </div>
       </footer>
       <div className="footer__policies">
-        <div className="footer__policies__link footerLinkHoverUnderline" onClick={props.handleFooterPrivacyLinkClick}>
+        <div className="footer__policies__link" onClick={props.handleFooterPrivacyLinkClick}>
           Privacy Policy
         </div>
-        <div className="footer__policies__link footerLinkHoverUnderline" onClick={props.handleFooterLinkClick}>
+        <div className="footer__policies__link" onClick={props.handleFooterLinkClick}>
           Terms And Conditions
         </div>
       </div>

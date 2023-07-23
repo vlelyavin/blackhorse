@@ -32,6 +32,6 @@ export const Typewriter = ({ targetText, timeout, started }) => {
     return () => {
       clearInterval(timer);
     };
-  }, [timeout, started]);
+  }, [started]);
   return <span style={{ opacity: text.length === 1 ? 0 : 1 }}>{text}</span>;
 };

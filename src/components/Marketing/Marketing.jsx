@@ -17,7 +17,6 @@ export const Marketing = () => {
             </div>
             <div className={classNames("marketing__column__title title", { animate: observer.inView })}>
               <Typewriter targetText="Marketing" timeout={100} started={observer.inView} />
-              &nbsp;
               <br />
               <Typewriter targetText="and seo" timeout={800} started={observer.inView} />
             </div>
