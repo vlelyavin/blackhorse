@@ -23,7 +23,7 @@ export const Banner = () => {
         </h1>
         <div className="banner__right">
           <p className="banner__right__text">
-            <b>Dark Horse</b>
+            <b>Black Horse</b>
             <br /> provides full cycle of
             <br /> web development
             <br /> from initial concept to

@@ -6,8 +6,7 @@ export const Typewriter = ({ targetText, timeout, started }) => {
 
   const handleGenerate = () => {
     let i = 0;
-    // setTimeout(() => {
-    // }, timeout);
+
     timer = setInterval(() => {
       i++;
       if (i === targetText.length - 1) clearInterval(timer);

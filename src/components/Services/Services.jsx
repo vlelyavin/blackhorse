@@ -13,6 +13,8 @@ export const Services = () => {
     document.querySelector(`.${e.target.dataset.selector}`).scrollIntoView(options);
   };
   const observer = useInView({ threshold: 0.05 });
+  const numberObserver = useInView({ threshold: 0.1 });
+
   return (
     <section className="services" ref={observer.ref}>
       <Container>
@@ -139,7 +141,7 @@ export const Services = () => {
       </Container>
       <div className="services__lower">
         <div className="services__lower__title title">Black horse</div>
-        <div className="services__lower__text">
+        <div className="services__lower__text" ref={numberObserver.ref}>
           We help you&nbsp;
           <span style={{ color: "var(--blue)" }}>
             unlock
@@ -155,19 +157,31 @@ export const Services = () => {
         </div>
         <div className="services__lower__row">
           <div className="services__lower__row__item">
-            <div className="services__lower__row__item__number" style={{ color: "var(--blue)" }}>
+            <div
+              className={classNames("services__lower__row__item__number", { animate: numberObserver.inView })}
+              style={{ color: "var(--blue)" }}
+            >
               53
             </div>
             <div className="services__lower__row__item__text">Successfully closed projects over the past year</div>
           </div>
           <div className="services__lower__row__item">
-            <div className="services__lower__row__item__number" style={{ color: "var(--olive)" }}>
+            <div
+              className={classNames("services__lower__row__item__number secondnumber", {
+                animate: numberObserver.inView,
+              })}
+              style={{ color: "var(--olive)" }}
+            >
               20
             </div>
             <div className="services__lower__row__item__text">Specialists in the team</div>
           </div>
           <div className="services__lower__row__item">
-            <div className="services__lower__row__item__symbol__container">
+            <div
+              className={classNames("services__lower__row__item__symbol__container", {
+                animate: numberObserver.inView,
+              })}
+            >
               <svg
                 className="services__lower__row__item__symbol"
                 width="239"
