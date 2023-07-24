@@ -57,6 +57,10 @@ textarea {
   transition-delay: 0.9s !important;
 }
 
+.app {
+  height: 100vh;
+}
+
 input:focus,
 textarea:focus {
   outline: none;
@@ -719,8 +723,9 @@ body {
           transform: translateY(50px);
           transition: 0.8s;
           opacity: 0;
+          transition-delay: 0.3s;
           &.secondnumber {
-            transition-delay: 0.2s;
+            transition-delay: 0.6s;
           }
         }
         &__text {
@@ -736,11 +741,11 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            transform: translateY(50px);
+            transform: translateY(80px);
             transition: 0.8s;
             opacity: 0;
             border-radius: 50%;
-            transition-delay: 0.4s;
+            transition-delay: 0.9s;
           }
         }
       }

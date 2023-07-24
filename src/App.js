@@ -12,7 +12,8 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Terms } from "./components/Terms";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import SmoothScrollbar from "smooth-scrollbar";
 
 export const App = () => {
   const [isTermsElVisible, setTermsElVisibility] = useState(false);
@@ -25,9 +26,22 @@ export const App = () => {
   const handleFooterPrivacyLinkClick = () => {
     setPrivacyVisibility(!isPrivacyVisible);
   };
+
+  useEffect(() => {
+    // const options = {
+    //   damping: 0.04,
+    //   thumbMinSize: 20,
+    //   renderByPixels: true,
+    //   alwaysShowTracks: false,
+    //   continuousScrolling: false,
+    // };
+    // SmoothScrollbar.init(document.querySelector(".app"), options);
+  }, []);
+
   return (
     <>
       <Header />
+
       <Banner />
       <Services />
       <Development />
