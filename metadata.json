@@ -1,0 +1,6 @@
+{
+    "name": "Test Coin",
+    "symbol": "TEST",
+    "description": "This is a test token on Solana",
+    "image": "https://raw.githubusercontent.com/solana-developers/opos-asset/main/assets/DeveloperPortal/image.png",
+  }
